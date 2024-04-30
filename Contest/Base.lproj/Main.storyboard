@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6r4-Ah-1yB">
+                                <rect key="frame" x="16" y="304.66666666666669" width="361" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocw-89-9Mh">
+                                <rect key="frame" x="158" y="424" width="78" height="41"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                <connections>
+                                    <action selector="submitTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ia-s0-xmp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join our contest by entering your e-mail address below!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgK-cK-tGE">
+                                <rect key="frame" x="16" y="150" width="361" height="83.666666666666686"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ocw-89-9Mh" firstAttribute="top" secondItem="6r4-Ah-1yB" secondAttribute="bottom" constant="85.329999999999998" id="1tY-CC-q9q"/>
+                            <constraint firstItem="6r4-Ah-1yB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3gB-xD-vIG"/>
+                            <constraint firstItem="Ocw-89-9Mh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="82w-uO-tgc"/>
+                            <constraint firstItem="6r4-Ah-1yB" firstAttribute="top" secondItem="hgK-cK-tGE" secondAttribute="bottom" constant="71" id="DlB-Vn-dhd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ocw-89-9Mh" secondAttribute="trailing" constant="157" id="ELW-Be-uvW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ocw-89-9Mh" secondAttribute="bottom" constant="353" id="FM1-UD-vTw"/>
+                            <constraint firstItem="6r4-Ah-1yB" firstAttribute="top" secondItem="hgK-cK-tGE" secondAttribute="bottom" constant="71" id="FT7-p0-BQc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6r4-Ah-1yB" secondAttribute="trailing" constant="16" id="SBO-sX-YBF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hgK-cK-tGE" secondAttribute="trailing" constant="16" id="XDq-mF-AF5"/>
+                            <constraint firstItem="hgK-cK-tGE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XpQ-eg-rpq"/>
+                            <constraint firstItem="Ocw-89-9Mh" firstAttribute="top" secondItem="6r4-Ah-1yB" secondAttribute="bottom" constant="85.329999999999998" id="bnm-av-v52"/>
+                            <constraint firstItem="hgK-cK-tGE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="kr3-p8-K6z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6r4-Ah-1yB" id="8TH-ig-eP3"/>
+                        <segue destination="jFi-55-XSc" kind="show" identifier="viewControllerSegue" id="3Pn-Lh-bYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AKC-5D-Z2q">
+            <objects>
+                <viewController id="jFi-55-XSc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdQ-Ht-iH9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have successfully entered our contest!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xea-CX-ggv">
+                                <rect key="frame" x="16" y="273" width="361" height="196"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oCS-gC-VcF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oCS-gC-VcF" firstAttribute="trailing" secondItem="xea-CX-ggv" secondAttribute="trailing" constant="16" id="avj-PT-J9T"/>
+                            <constraint firstItem="xea-CX-ggv" firstAttribute="top" secondItem="oCS-gC-VcF" secondAttribute="top" constant="273" id="eKb-Gi-D2s"/>
+                            <constraint firstItem="oCS-gC-VcF" firstAttribute="bottom" secondItem="xea-CX-ggv" secondAttribute="bottom" constant="373" id="eOv-cw-nkC"/>
+                            <constraint firstItem="xea-CX-ggv" firstAttribute="leading" secondItem="oCS-gC-VcF" secondAttribute="leading" constant="16" id="mAA-66-nS8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DKR-38-Eob"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AA9-P3-NbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009.9236641221373" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
